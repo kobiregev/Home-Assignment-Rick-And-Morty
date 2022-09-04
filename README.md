@@ -10,7 +10,6 @@ Install my-project with npm
 
 ```bash
   npm install 
-  cd my-project
 ```
  ## Runing
 
