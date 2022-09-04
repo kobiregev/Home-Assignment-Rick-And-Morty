@@ -2,6 +2,7 @@
 
 Home assignment using the rick and morty api.
 
+https://rickandmortyapi.com/
 
 ## Installation
 
