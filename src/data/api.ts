@@ -34,12 +34,13 @@ async function getCharactersByIds(idsArray: string[]) {
 // all where origin is C - 137
 export async function getAllCharactersFromOriginalEarth() {
   try {
+    // @ts-ignore
     const { residentsIds, dimension } = await getDimensionResidentsIds();
 
-    if (!residentsIds) return null;
+    if (!residentsIds || !dimension) return null;
 
     const characters = await getCharactersByIds(residentsIds);
-    
+
     // filter characters and then add dimension
     return filterCharacterByOriginName(characters).map((character) => ({
       ...character,
