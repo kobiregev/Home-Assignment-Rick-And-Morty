@@ -41,7 +41,8 @@ export const Chart: React.FC<ChartProps> = ({
         ))}
       </div>
       <div
-        className={`flex justify-center items-end py-4 space-x-4 font-mono font-bold text-xs text-center text-white h-[${chartHeight}px]`}
+        className={`flex justify-center items-end py-4 space-x-4 font-mono font-bold text-xs text-center text-white `}
+        style={{ height: chartHeight }}
       >
         {parsedData.map((data) => (
           <Bar
