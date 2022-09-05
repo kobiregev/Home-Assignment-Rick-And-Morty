@@ -21,9 +21,7 @@ async function getDimensionResidentsIds() {
 }
 async function getCharactersByIds(idsArray: string[]) {
   try {
-    const response = await fetch(
-      `https://rickandmortyapi.com/api/character/${idsArray}`
-    );
+    const response = await fetch(`${BASE_URL}/character/${idsArray}`);
     if (!response.ok) return null;
     const data = await response.json();
     return data;
@@ -50,7 +48,6 @@ export async function getAllCharactersFromOriginalEarth() {
     console.error(e);
   }
 }
-// 1 3 2 4  5
 
 export async function getCharacters() {
   try {
@@ -59,9 +56,7 @@ export async function getCharacters() {
     );
     const data = await response.json();
     return data;
-    console.log(data);
   } catch (e) {
     console.error(e);
   }
-  // fetch(`${BASE_URL}/characters/name`);
 }

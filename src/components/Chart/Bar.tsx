@@ -23,7 +23,8 @@ export const Bar: React.FC<BarProps> = ({ name, value, color, highest }) => {
       <p className="text-black py-2">
         {" "}
         {name}
-        <p>({value})</p>
+        <br />
+        <span>({value})</span>
       </p>
     </div>
   );
